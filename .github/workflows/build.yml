@@ -2,7 +2,7 @@ name: Build & Push CV PDF
 
 on:
   push:
-    paths: ["cv.tex", "cv/*.tex", "cv/*.sty"]
+    paths: ["cv.tex", "cv/*.tex", "cv/*.sty", ".github/workflows/build.yml"]
     branches: [master]
 
 jobs:
@@ -17,7 +17,7 @@ jobs:
 
       - uses: actions/checkout@v4
         with:
-          repository: eagleray2020/website
+          repository: eagleray2020/eagleray2020.github.io
           token: ${{ secrets.WEBSITE_PAT }}
           path: website
 
